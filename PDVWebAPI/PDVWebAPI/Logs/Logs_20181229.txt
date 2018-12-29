@@ -1,0 +1,395 @@
+INFO  29-12-2018 09:11:00 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/index.html   
+INFO  29-12-2018 09:11:00 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request starting HTTP/1.1 DEBUG http://localhost:52449/  0 
+INFO  29-12-2018 09:11:01 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request finished in 126.0722ms 200  
+INFO  29-12-2018 09:11:01 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request finished in 334.4529ms 200 text/html 
+INFO  29-12-2018 09:11:01 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/v1/swagger.json   
+INFO  29-12-2018 09:11:02 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 900.4146ms 200 application/json;charset=utf-8 
+INFO  29-12-2018 09:11:21 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request starting HTTP/1.1 POST http://localhost:52449/api/Pagamento application/json-patch+json 40 
+INFO  29-12-2018 09:11:21 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Route matched with {action = "Post", controller = "Pagamento"}. Executing action PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) 
+INFO  29-12-2018 09:11:21 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [10] - Executed action PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) in 24.7132ms 
+ERROR 29-12-2018 09:11:21 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [10] - An unhandled exception has occurred while executing the request. System.InvalidOperationException: Cannot consume scoped service 'Repository.SQLRepository' from singleton 'Application.IPagamentoService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitScoped(ScopedCallSite scopedCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitSingleton(SingletonCallSite singletonCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateCallSite(IServiceCallSite callSite)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+INFO  29-12-2018 09:11:22 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 407.5138ms 500 text/html; charset=utf-8 
+INFO  29-12-2018 09:11:22 Microsoft.AspNetCore.Server.Kestrel [10] - Connection id "0HLJDDM6JOK45", Request id "0HLJDDM6JOK45:00000002": the application completed without reading the entire request body. 
+INFO  29-12-2018 09:13:07 Microsoft.AspNetCore.Hosting.Internal.WebHost [18] - Request starting HTTP/1.1 POST http://localhost:52449/api/Pagamento application/json-patch+json 40 
+INFO  29-12-2018 09:13:07 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [18] - Route matched with {action = "Post", controller = "Pagamento"}. Executing action PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) 
+INFO  29-12-2018 09:13:07 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [18] - Executed action PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) in 2.1033ms 
+ERROR 29-12-2018 09:13:07 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [18] - An unhandled exception has occurred while executing the request. System.InvalidOperationException: Cannot consume scoped service 'Repository.SQLRepository' from singleton 'Application.IPagamentoService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitScoped(ScopedCallSite scopedCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitSingleton(SingletonCallSite singletonCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateCallSite(IServiceCallSite callSite)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+INFO  29-12-2018 09:13:07 Microsoft.AspNetCore.Hosting.Internal.WebHost [18] - Request finished in 40.2845ms 500 text/html; charset=utf-8 
+INFO  29-12-2018 09:13:07 Microsoft.AspNetCore.Server.Kestrel [18] - Connection id "0HLJDDM6JOK47", Request id "0HLJDDM6JOK47:00000001": the application completed without reading the entire request body. 
+INFO  29-12-2018 09:20:26 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/index.html   
+INFO  29-12-2018 09:20:26 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request starting HTTP/1.1 DEBUG http://localhost:52449/  0 
+INFO  29-12-2018 09:20:26 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request finished in 65.4128ms 200  
+INFO  29-12-2018 09:20:27 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request finished in 199.8615ms 200 text/html 
+INFO  29-12-2018 09:20:27 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/v1/swagger.json   
+INFO  29-12-2018 09:20:27 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 454.3365ms 200 application/json;charset=utf-8 
+INFO  29-12-2018 09:20:46 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request starting HTTP/1.1 POST http://localhost:52449/api/Pagamento application/json 40 
+INFO  29-12-2018 09:20:47 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [8] - Route matched with {action = "Post", controller = "Pagamento"}. Executing action PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) 
+WARN  29-12-2018 09:20:52 Microsoft.EntityFrameworkCore.Model.Validation [8] - No type was specified for the decimal column 'troco' on entity type 'SaidaCaixa'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. 
+INFO  29-12-2018 09:20:52 Microsoft.EntityFrameworkCore.Infrastructure [8] - Entity Framework Core 2.2.0-rtm-35687 initialized 'SQLRepository' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+INFO  29-12-2018 09:21:08 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [8] - Executing action method PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) with arguments (Entity.Pagamento) - Validation state: Valid 
+ERROR 29-12-2018 09:21:12 Microsoft.EntityFrameworkCore.Database.Connection [8] - An error occurred using the connection to database 'PDV' on server 'V-JOVIAN-HP\SQLEXPRESS'. System.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The wait operation timed out.) ---> System.ComponentModel.Win32Exception (258): The wait operation timed out
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+ClientConnectionId:55b8b962-849d-40b8-9a50-602b4a9149d9
+Error Number:258,State:0,Class:20
+
+ERROR 29-12-2018 09:21:12 Microsoft.EntityFrameworkCore.Update [8] - An exception occurred in the database while saving changes for context type 'Repository.SQLRepository'.
+System.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The wait operation timed out.) ---> System.ComponentModel.Win32Exception (258): The wait operation timed out
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction()
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(DbContext _, ValueTuple`2 parameters)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IReadOnlyList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ClientConnectionId:55b8b962-849d-40b8-9a50-602b4a9149d9
+Error Number:258,State:0,Class:20 System.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The wait operation timed out.) ---> System.ComponentModel.Win32Exception (258): The wait operation timed out
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction()
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(DbContext _, ValueTuple`2 parameters)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IReadOnlyList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ClientConnectionId:55b8b962-849d-40b8-9a50-602b4a9149d9
+Error Number:258,State:0,Class:20
+
+INFO  29-12-2018 09:24:23 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/index.html   
+INFO  29-12-2018 09:24:23 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request starting HTTP/1.1 DEBUG http://localhost:52449/  0 
+INFO  29-12-2018 09:24:23 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request finished in 113.4442ms 200  
+INFO  29-12-2018 09:24:23 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 262.1895ms 200 text/html 
+INFO  29-12-2018 09:24:23 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/v1/swagger.json   
+INFO  29-12-2018 09:24:24 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 411.1562ms 200 application/json;charset=utf-8 
+INFO  29-12-2018 09:24:43 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request starting HTTP/1.1 POST http://localhost:52449/api/Pagamento application/json-patch+json 40 
+INFO  29-12-2018 09:24:43 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Route matched with {action = "Post", controller = "Pagamento"}. Executing action PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) 
+WARN  29-12-2018 09:24:49 Microsoft.EntityFrameworkCore.Model.Validation [9] - No type was specified for the decimal column 'troco' on entity type 'SaidaCaixa'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. 
+INFO  29-12-2018 09:24:49 Microsoft.EntityFrameworkCore.Infrastructure [9] - Entity Framework Core 2.2.0-rtm-35687 initialized 'SQLRepository' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+INFO  29-12-2018 09:24:49 Microsoft.EntityFrameworkCore.Database.Command [8] - Executed DbCommand (115ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+INFO  29-12-2018 09:24:49 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executing action method PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) with arguments (Entity.Pagamento) - Validation state: Valid 
+INFO  29-12-2018 09:24:53 Microsoft.EntityFrameworkCore.Database.Command [7] - Executed DbCommand (57ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [SaidaCaixa] (
+    [id] uniqueidentifier NOT NULL,
+    [troco] decimal(18, 2) NOT NULL,
+    [qtdNotas100] int NOT NULL,
+    [qtdNotas50] int NOT NULL,
+    [qtdNotas20] int NOT NULL,
+    [qtdNotas10] int NOT NULL,
+    [qtdMoedas050] int NOT NULL,
+    [qtdMoedas010] int NOT NULL,
+    [qtdMoedas005] int NOT NULL,
+    [qtdMoedas001] int NOT NULL,
+    [dataSaida] datetime2 NOT NULL,
+    CONSTRAINT [PK_SaidaCaixa] PRIMARY KEY ([id])
+); 
+INFO  29-12-2018 09:24:53 Microsoft.EntityFrameworkCore.Database.Command [9] - Executed DbCommand (39ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [SaidaCaixa] ([id], [dataSaida], [qtdMoedas001], [qtdMoedas005], [qtdMoedas010], [qtdMoedas050], [qtdNotas10], [qtdNotas100], [qtdNotas20], [qtdNotas50], [troco])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10); 
+INFO  29-12-2018 09:24:53 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executed action method PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3265.8073ms. 
+INFO  29-12-2018 09:24:53 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [9] - Executing ObjectResult, writing value of type 'Entity.SaidaCaixa'. 
+INFO  29-12-2018 09:24:53 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executed action PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) in 9533.0034ms 
+INFO  29-12-2018 09:24:53 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request finished in 9773.0971ms 200 application/json; charset=utf-8 
+INFO  29-12-2018 09:26:51 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/index.html   
+INFO  29-12-2018 09:26:51 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request starting HTTP/1.1 DEBUG http://localhost:52449/  0 
+INFO  29-12-2018 09:26:51 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 102.0091ms 200  
+INFO  29-12-2018 09:26:52 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request finished in 280.9012ms 200 text/html 
+INFO  29-12-2018 09:26:52 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/v1/swagger.json   
+INFO  29-12-2018 09:26:53 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 567.0977ms 200 application/json;charset=utf-8 
+INFO  29-12-2018 09:27:06 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request starting HTTP/1.1 POST http://localhost:52449/api/Pagamento application/json-patch+json 40 
+INFO  29-12-2018 09:27:06 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [8] - Route matched with {action = "Post", controller = "Pagamento"}. Executing action PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) 
+WARN  29-12-2018 09:27:11 Microsoft.EntityFrameworkCore.Model.Validation [8] - No type was specified for the decimal column 'troco' on entity type 'SaidaCaixa'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. 
+INFO  29-12-2018 09:27:11 Microsoft.EntityFrameworkCore.Infrastructure [8] - Entity Framework Core 2.2.0-rtm-35687 initialized 'SQLRepository' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+INFO  29-12-2018 09:27:11 Microsoft.EntityFrameworkCore.Database.Command [7] - Executed DbCommand (97ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+INFO  29-12-2018 09:27:11 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [8] - Executing action method PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) with arguments (Entity.Pagamento) - Validation state: Valid 
+INFO  29-12-2018 09:27:14 Microsoft.EntityFrameworkCore.Database.Command [8] - Executed DbCommand (41ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [SaidaCaixa] ([id], [dataSaida], [qtdMoedas001], [qtdMoedas005], [qtdMoedas010], [qtdMoedas050], [qtdNotas10], [qtdNotas100], [qtdNotas20], [qtdNotas50], [troco])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10); 
+INFO  29-12-2018 09:27:14 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [8] - Executed action method PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3039.8979ms. 
+INFO  29-12-2018 09:27:14 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [8] - Executing ObjectResult, writing value of type 'Entity.SaidaCaixa'. 
+INFO  29-12-2018 09:27:14 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [8] - Executed action PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) in 8659.4903ms 
+INFO  29-12-2018 09:27:14 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request finished in 8916.5955ms 200 application/json; charset=utf-8 
+INFO  29-12-2018 09:28:08 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 POST http://localhost:52449/api/Pagamento application/json-patch+json 47 
+INFO  29-12-2018 09:28:08 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Route matched with {action = "Post", controller = "Pagamento"}. Executing action PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) 
+INFO  29-12-2018 09:28:08 Microsoft.EntityFrameworkCore.Infrastructure [7] - Entity Framework Core 2.2.0-rtm-35687 initialized 'SQLRepository' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+INFO  29-12-2018 09:28:08 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executing action method PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) with arguments (Entity.Pagamento) - Validation state: Valid 
+INFO  29-12-2018 09:28:12 Microsoft.EntityFrameworkCore.Database.Command [18] - Executed DbCommand (3,939ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+INFO  29-12-2018 09:28:12 Microsoft.EntityFrameworkCore.Database.Command [7] - Executed DbCommand (62ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [SaidaCaixa] ([id], [dataSaida], [qtdMoedas001], [qtdMoedas005], [qtdMoedas010], [qtdMoedas050], [qtdNotas10], [qtdNotas100], [qtdNotas20], [qtdNotas50], [troco])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10); 
+INFO  29-12-2018 09:28:12 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action method PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3905.0313ms. 
+INFO  29-12-2018 09:28:12 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [7] - Executing ObjectResult, writing value of type 'Entity.SaidaCaixa'. 
+INFO  29-12-2018 09:28:12 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) in 4037.3833ms 
+INFO  29-12-2018 09:28:12 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 4062.4291ms 200 application/json; charset=utf-8 
+INFO  29-12-2018 09:28:33 Microsoft.AspNetCore.Hosting.Internal.WebHost [17] - Request starting HTTP/1.1 GET http://localhost:52449/api/Pagamento   
+INFO  29-12-2018 09:28:33 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [17] - Route matched with {action = "Get", controller = "Pagamento"}. Executing action PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI) 
+INFO  29-12-2018 09:28:33 Microsoft.EntityFrameworkCore.Infrastructure [17] - Entity Framework Core 2.2.0-rtm-35687 initialized 'SQLRepository' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+INFO  29-12-2018 09:28:33 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [17] - Executing action method PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI) - Validation state: Valid 
+INFO  29-12-2018 09:28:33 Microsoft.EntityFrameworkCore.Database.Command [7] - Executed DbCommand (53ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+ERROR 29-12-2018 09:28:34 Controllers.PagamentoController [17] - Method not found: 'System.Reflection.MethodInfo Microsoft.EntityFrameworkCore.Query.EntityQueryModelVisitor.get_SelectAsyncMethod()'. System.MissingMethodException: Method not found: 'System.Reflection.MethodInfo Microsoft.EntityFrameworkCore.Query.EntityQueryModelVisitor.get_SelectAsyncMethod()'.
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryModelVisitor.VisitSelectClause(SelectClause selectClause, QueryModel queryModel)
+   at Remotion.Linq.Clauses.SelectClause.Accept(IQueryModelVisitor visitor, QueryModel queryModel)
+   at Remotion.Linq.QueryModelVisitorBase.VisitQueryModel(QueryModel queryModel)
+   at Microsoft.EntityFrameworkCore.Query.EntityQueryModelVisitor.VisitQueryModel(QueryModel queryModel)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryModelVisitor.VisitQueryModel(QueryModel queryModel)
+   at Microsoft.EntityFrameworkCore.Query.EntityQueryModelVisitor.CreateQueryExecutor[TResult](QueryModel queryModel)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](Expression query, IQueryModelGenerator queryModelGenerator, IDatabase database, IDiagnosticsLogger`1 logger, Type contextType)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass13_0`1.<Execute>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQueryCore[TFunc](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Remotion.Linq.QueryableBase`1.GetEnumerator()
+   at System.Collections.Generic.List`1.AddEnumerable(IEnumerable`1 enumerable)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Application.PagamentoService.ConsultaSaidas() in C:\Projects\Totus\PDVWebAPI\Application\PagamentoService.cs:line 26
+   at PDVWebAPI.Controllers.PagamentoController.Get() in C:\Projects\Totus\PDVWebAPI\PDVWebAPI\Controllers\PagamentoController.cs:line 31
+
+INFO  29-12-2018 09:28:34 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [17] - Executed action method PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 432.9044ms. 
+INFO  29-12-2018 09:28:34 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [17] - Executing ObjectResult, writing value of type 'System.String'. 
+INFO  29-12-2018 09:28:34 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [17] - Executed action PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI) in 492.7274ms 
+INFO  29-12-2018 09:28:34 Microsoft.AspNetCore.Hosting.Internal.WebHost [17] - Request finished in 496.4117ms 500 text/plain; charset=utf-8 
+INFO  29-12-2018 09:29:22 Microsoft.AspNetCore.Hosting.Internal.WebHost [17] - Request starting HTTP/1.1 GET http://localhost:52449/api/Pagamento   
+INFO  29-12-2018 09:29:22 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [17] - Route matched with {action = "Get", controller = "Pagamento"}. Executing action PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI) 
+INFO  29-12-2018 09:29:22 Microsoft.EntityFrameworkCore.Infrastructure [17] - Entity Framework Core 2.2.0-rtm-35687 initialized 'SQLRepository' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+INFO  29-12-2018 09:29:22 Microsoft.EntityFrameworkCore.Database.Command [22] - Executed DbCommand (84ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+INFO  29-12-2018 09:29:22 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [17] - Executing action method PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI) - Validation state: Valid 
+INFO  29-12-2018 09:33:08 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request starting HTTP/1.1 DEBUG http://localhost:52449/  0 
+INFO  29-12-2018 09:33:08 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/index.html   
+INFO  29-12-2018 09:33:08 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request finished in 80.7961ms 200  
+INFO  29-12-2018 09:33:08 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 223.0651ms 200 text/html 
+INFO  29-12-2018 09:33:09 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/v1/swagger.json   
+INFO  29-12-2018 09:33:09 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request finished in 418.7082ms 200 application/json;charset=utf-8 
+INFO  29-12-2018 09:33:30 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET http://localhost:52449/api/Pagamento   
+INFO  29-12-2018 09:33:31 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Route matched with {action = "Get", controller = "Pagamento"}. Executing action PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI) 
+WARN  29-12-2018 09:33:32 Microsoft.EntityFrameworkCore.Model.Validation [7] - No type was specified for the decimal column 'troco' on entity type 'SaidaCaixa'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. 
+INFO  29-12-2018 09:33:32 Microsoft.EntityFrameworkCore.Infrastructure [7] - Entity Framework Core 2.2.0-rtm-35687 initialized 'SQLRepository' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+INFO  29-12-2018 09:33:32 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executing action method PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI) - Validation state: Valid 
+INFO  29-12-2018 09:33:37 Microsoft.EntityFrameworkCore.Database.Command [9] - Executed DbCommand (2,361ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+ERROR 29-12-2018 09:33:37 Controllers.PagamentoController [7] - Method not found: 'System.Reflection.MethodInfo Microsoft.EntityFrameworkCore.Query.EntityQueryModelVisitor.get_SelectAsyncMethod()'. System.MissingMethodException: Method not found: 'System.Reflection.MethodInfo Microsoft.EntityFrameworkCore.Query.EntityQueryModelVisitor.get_SelectAsyncMethod()'.
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryModelVisitor.VisitSelectClause(SelectClause selectClause, QueryModel queryModel)
+   at Remotion.Linq.Clauses.SelectClause.Accept(IQueryModelVisitor visitor, QueryModel queryModel)
+   at Remotion.Linq.QueryModelVisitorBase.VisitQueryModel(QueryModel queryModel)
+   at Microsoft.EntityFrameworkCore.Query.EntityQueryModelVisitor.VisitQueryModel(QueryModel queryModel)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryModelVisitor.VisitQueryModel(QueryModel queryModel)
+   at Microsoft.EntityFrameworkCore.Query.EntityQueryModelVisitor.CreateQueryExecutor[TResult](QueryModel queryModel)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](Expression query, IQueryModelGenerator queryModelGenerator, IDatabase database, IDiagnosticsLogger`1 logger, Type contextType)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass13_0`1.<Execute>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQueryCore[TFunc](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Remotion.Linq.QueryableBase`1.GetEnumerator()
+   at System.Collections.Generic.List`1.AddEnumerable(IEnumerable`1 enumerable)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at PDVWebAPI.Controllers.PagamentoController.Get() in C:\Projects\Totus\PDVWebAPI\PDVWebAPI\Controllers\PagamentoController.cs:line 31
+
+INFO  29-12-2018 09:33:37 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action method PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 5673.7965ms. 
+INFO  29-12-2018 09:33:38 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [7] - Executing ObjectResult, writing value of type 'System.String'. 
+INFO  29-12-2018 09:33:38 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI) in 6807.2549ms 
+INFO  29-12-2018 09:33:38 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 7101.5207ms 500 text/plain; charset=utf-8 
+INFO  29-12-2018 09:40:16 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/index.html   
+INFO  29-12-2018 09:40:16 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 DEBUG http://localhost:52449/  0 
+INFO  29-12-2018 09:40:16 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 73.6369ms 200  
+INFO  29-12-2018 09:40:16 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request finished in 232.2828ms 200 text/html 
+INFO  29-12-2018 09:40:17 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/v1/swagger.json   
+INFO  29-12-2018 09:40:17 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request finished in 454.6663ms 200 application/json;charset=utf-8 
+INFO  29-12-2018 09:40:22 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET http://localhost:52449/api/Pagamento   
+INFO  29-12-2018 09:40:23 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Route matched with {action = "Get", controller = "Pagamento"}. Executing action PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI) 
+WARN  29-12-2018 09:40:23 Microsoft.EntityFrameworkCore.Model.Validation [7] - No type was specified for the decimal column 'troco' on entity type 'SaidaCaixa'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. 
+INFO  29-12-2018 09:40:23 Microsoft.EntityFrameworkCore.Infrastructure [7] - Entity Framework Core 2.2.0-rtm-35687 initialized 'SQLRepository' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+INFO  29-12-2018 09:40:24 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executing action method PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI) - Validation state: Valid 
+INFO  29-12-2018 09:40:36 Microsoft.EntityFrameworkCore.Database.Command [8] - Executed DbCommand (7,033ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+INFO  29-12-2018 09:42:49 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 DEBUG http://localhost:52449/  0 
+INFO  29-12-2018 09:42:49 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/index.html   
+INFO  29-12-2018 09:42:49 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 75.0189ms 200  
+INFO  29-12-2018 09:42:49 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request finished in 225.5171ms 200 text/html 
+INFO  29-12-2018 09:42:49 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/v1/swagger.json   
+INFO  29-12-2018 09:42:50 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 394.1826ms 200 application/json;charset=utf-8 
+INFO  29-12-2018 09:42:56 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET http://localhost:52449/api/Pagamento   
+INFO  29-12-2018 09:42:56 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Route matched with {action = "Get", controller = "Pagamento"}. Executing action PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI) 
+WARN  29-12-2018 09:42:57 Microsoft.EntityFrameworkCore.Model.Validation [7] - No type was specified for the decimal column 'troco' on entity type 'SaidaCaixa'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. 
+INFO  29-12-2018 09:42:57 Microsoft.EntityFrameworkCore.Infrastructure [7] - Entity Framework Core 2.2.0-rtm-35687 initialized 'SQLRepository' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+INFO  29-12-2018 09:42:57 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executing action method PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI) - Validation state: Valid 
+INFO  29-12-2018 09:43:04 Microsoft.EntityFrameworkCore.Database.Command [9] - Executed DbCommand (75ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+INFO  29-12-2018 09:43:04 Microsoft.EntityFrameworkCore.Database.Command [7] - Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[id], [x].[dataSaida], [x].[qtdMoedas001], [x].[qtdMoedas005], [x].[qtdMoedas010], [x].[qtdMoedas050], [x].[qtdNotas10], [x].[qtdNotas100], [x].[qtdNotas20], [x].[qtdNotas50], [x].[troco]
+FROM [SaidaCaixa] AS [x]
+WHERE [x].[troco] > 0.0 
+INFO  29-12-2018 09:43:07 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action method PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9409.5723ms. 
+INFO  29-12-2018 09:43:07 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [7] - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entity.SaidaCaixa, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+INFO  29-12-2018 09:43:07 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI) in 10589.2303ms 
+INFO  29-12-2018 09:43:07 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 10807.5469ms 200 application/json; charset=utf-8 
+INFO  29-12-2018 09:46:59 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 DEBUG http://localhost:52449/  0 
+INFO  29-12-2018 09:46:59 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/index.html   
+INFO  29-12-2018 09:46:59 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 74.6351ms 200  
+INFO  29-12-2018 09:47:00 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 237.5363ms 200 text/html 
+INFO  29-12-2018 09:47:00 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/v1/swagger.json   
+INFO  29-12-2018 09:47:00 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 401.339ms 200 application/json;charset=utf-8 
+INFO  29-12-2018 09:47:05 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request starting HTTP/1.1 GET http://localhost:52449/api/Pagamento   
+INFO  29-12-2018 09:47:06 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Route matched with {action = "Get", controller = "Pagamento"}. Executing action PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI) 
+WARN  29-12-2018 09:47:07 Microsoft.EntityFrameworkCore.Model.Validation [9] - No type was specified for the decimal column 'troco' on entity type 'SaidaCaixa'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. 
+INFO  29-12-2018 09:47:07 Microsoft.EntityFrameworkCore.Infrastructure [9] - Entity Framework Core 2.2.0-rtm-35687 initialized 'SQLRepository' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+INFO  29-12-2018 09:47:07 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executing action method PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI) - Validation state: Valid 
+INFO  29-12-2018 09:47:07 Microsoft.EntityFrameworkCore.Database.Command [7] - Executed DbCommand (93ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+INFO  29-12-2018 09:47:07 Microsoft.EntityFrameworkCore.Database.Command [9] - Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[id], [x].[dataSaida], [x].[qtdMoedas001], [x].[qtdMoedas005], [x].[qtdMoedas010], [x].[qtdMoedas050], [x].[qtdNotas10], [x].[qtdNotas100], [x].[qtdNotas20], [x].[qtdNotas50], [x].[troco]
+FROM [SaidaCaixa] AS [x]
+WHERE [x].[troco] > 0.0 
+INFO  29-12-2018 09:47:08 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executed action method PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 550.9526ms. 
+INFO  29-12-2018 09:47:08 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [9] - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entity.SaidaCaixa, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+INFO  29-12-2018 09:47:08 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executed action PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI) in 1935.5405ms 
+INFO  29-12-2018 09:47:08 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request finished in 2209.4068ms 200 application/json; charset=utf-8 
+INFO  29-12-2018 10:12:52 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/index.html   
+INFO  29-12-2018 10:12:52 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request starting HTTP/1.1 DEBUG http://localhost:52449/  0 
+INFO  29-12-2018 10:12:52 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request finished in 62.7788ms 200  
+INFO  29-12-2018 10:12:52 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request finished in 198.9713ms 200 text/html 
+INFO  29-12-2018 10:12:52 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/v1/swagger.json   
+INFO  29-12-2018 10:12:53 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 521.5007ms 200 application/json;charset=utf-8 
+INFO  29-12-2018 10:13:04 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 POST http://localhost:52449/api/Pagamento application/json-patch+json 40 
+INFO  29-12-2018 10:13:04 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Route matched with {action = "Post", controller = "Pagamento"}. Executing action PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) 
+WARN  29-12-2018 10:13:05 Microsoft.EntityFrameworkCore.Model.Validation [7] - No type was specified for the decimal column 'troco' on entity type 'SaidaCaixa'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. 
+INFO  29-12-2018 10:13:05 Microsoft.EntityFrameworkCore.Infrastructure [7] - Entity Framework Core 2.2.0-rtm-35687 initialized 'SQLContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+INFO  29-12-2018 10:13:05 Microsoft.EntityFrameworkCore.Database.Command [8] - Executed DbCommand (111ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+INFO  29-12-2018 10:13:05 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executing action method PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) with arguments (Entity.Pagamento) - Validation state: Valid 
+INFO  29-12-2018 10:13:16 Microsoft.EntityFrameworkCore.Database.Command [7] - Executed DbCommand (36ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [SaidaCaixa] ([id], [dataSaida], [qtdMoedas001], [qtdMoedas005], [qtdMoedas010], [qtdMoedas050], [qtdNotas10], [qtdNotas100], [qtdNotas20], [qtdNotas50], [troco])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10); 
+INFO  29-12-2018 10:13:23 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action method PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 18075.7388ms. 
+INFO  29-12-2018 10:13:23 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [7] - Executing ObjectResult, writing value of type 'Entity.SaidaCaixa'. 
+INFO  29-12-2018 10:13:23 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) in 19499.2256ms 
+INFO  29-12-2018 10:13:24 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 19795.3594ms 200 application/json; charset=utf-8 
+INFO  29-12-2018 13:03:30 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/index.html   
+INFO  29-12-2018 13:03:30 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request starting HTTP/1.1 DEBUG http://localhost:52449/  0 
+INFO  29-12-2018 13:03:30 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request finished in 146.9963ms 200  
+INFO  29-12-2018 13:03:30 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request finished in 387.5499ms 200 text/html 
+INFO  29-12-2018 13:03:30 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/swagger-ui-bundle.js   
+INFO  29-12-2018 13:03:30 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/swagger-ui.css   
+INFO  29-12-2018 13:03:30 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/swagger-ui-standalone-preset.js   
+INFO  29-12-2018 13:03:30 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [10] - Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+INFO  29-12-2018 13:03:30 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [9] - Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+INFO  29-12-2018 13:03:30 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [8] - Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+INFO  29-12-2018 13:03:30 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 174.7852ms 200 text/css 
+INFO  29-12-2018 13:03:30 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request finished in 183.9695ms 200 application/javascript 
+INFO  29-12-2018 13:03:30 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request finished in 164.2618ms 200 application/javascript 
+INFO  29-12-2018 13:03:31 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request starting HTTP/1.1 GET http://localhost:52449/swagger/v1/swagger.json   
+INFO  29-12-2018 13:03:32 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 1006.8392ms 200 application/json;charset=utf-8 
+INFO  29-12-2018 13:03:36 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET http://localhost:52449/api/Pagamento   
+INFO  29-12-2018 13:03:37 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Route matched with {action = "Get", controller = "Pagamento"}. Executing action PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI) 
+WARN  29-12-2018 13:03:38 Microsoft.EntityFrameworkCore.Model.Validation [7] - No type was specified for the decimal column 'troco' on entity type 'SaidaCaixa'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. 
+INFO  29-12-2018 13:03:38 Microsoft.EntityFrameworkCore.Infrastructure [7] - Entity Framework Core 2.2.0-rtm-35687 initialized 'SQLContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+INFO  29-12-2018 13:03:38 Microsoft.EntityFrameworkCore.Database.Command [7] - Executed DbCommand (87ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+INFO  29-12-2018 13:03:38 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executing action method PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI) - Validation state: Valid 
+INFO  29-12-2018 13:03:39 Microsoft.EntityFrameworkCore.Database.Command [7] - Executed DbCommand (44ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[id], [x].[dataSaida], [x].[qtdMoedas001], [x].[qtdMoedas005], [x].[qtdMoedas010], [x].[qtdMoedas050], [x].[qtdNotas10], [x].[qtdNotas100], [x].[qtdNotas20], [x].[qtdNotas50], [x].[troco]
+FROM [SaidaCaixa] AS [x]
+WHERE [x].[troco] > 0.0 
+INFO  29-12-2018 13:03:39 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action method PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 524.3729ms. 
+INFO  29-12-2018 13:03:39 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [7] - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entity.SaidaCaixa, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+INFO  29-12-2018 13:03:39 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executed action PDVWebAPI.Controllers.PagamentoController.Get (PDVWebAPI) in 2375.8943ms 
+INFO  29-12-2018 13:03:39 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 2636.9905ms 200 application/json; charset=utf-8 
+INFO  29-12-2018 13:03:55 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request starting HTTP/1.1 POST http://localhost:52449/api/Pagamento application/json-patch+json 44 
+INFO  29-12-2018 13:03:55 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Route matched with {action = "Post", controller = "Pagamento"}. Executing action PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) 
+INFO  29-12-2018 13:03:55 Microsoft.EntityFrameworkCore.Infrastructure [9] - Entity Framework Core 2.2.0-rtm-35687 initialized 'SQLContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+INFO  29-12-2018 13:03:55 Microsoft.EntityFrameworkCore.Database.Command [9] - Executed DbCommand (69ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+INFO  29-12-2018 13:03:55 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executing action method PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) with arguments (Entity.Pagamento) - Validation state: Valid 
+INFO  29-12-2018 13:03:55 Microsoft.EntityFrameworkCore.Database.Command [9] - Executed DbCommand (38ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [SaidaCaixa] ([id], [dataSaida], [qtdMoedas001], [qtdMoedas005], [qtdMoedas010], [qtdMoedas050], [qtdNotas10], [qtdNotas100], [qtdNotas20], [qtdNotas50], [troco])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10); 
+INFO  29-12-2018 13:03:55 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executed action method PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 296.6243ms. 
+INFO  29-12-2018 13:03:55 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [9] - Executing ObjectResult, writing value of type 'Entity.SaidaCaixa'. 
+INFO  29-12-2018 13:03:55 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [9] - Executed action PDVWebAPI.Controllers.PagamentoController.Post (PDVWebAPI) in 582.6428ms 
+INFO  29-12-2018 13:03:55 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request finished in 619.5578ms 200 application/json; charset=utf-8 
